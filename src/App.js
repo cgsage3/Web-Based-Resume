@@ -1,15 +1,38 @@
 import './App.css';
+import experienceContent from "./data/experience";
+// print all keys
 
 function App() {
 	const url = new URL(window.location.href);
 	const params = new URLSearchParams(url.search);
 	const resumeOnlyMode = params.get('resumeonly');
 
+const ComplexList = () => (
+  <div class="item">
+    {experienceContent.map((val, id) => (
+		<div key={id}>
+			<div class="item-header">
+				<div class="item-title">{val.position} - {val.compnayName}</div>
+				<div class="item-date">{val.year}</div>
+			</div>
+			<div class="job-desc">
+			<ul>
+				{Object.keys(val.details).map((list, i) => (
+				    <li key={i}>
+				        {val.details[list]}
+				    </li>
+				))}
+			</ul>			
+			</div>
+		</div>
+    ))}
+  </div>
+);
 	return (
 		<div className="App">
 			{!resumeOnlyMode && (
 				<div id="other-body-stuff">
-					Hi stuff goes here
+					Hi stuff goes here and there. Everywhere.
 				</div>
 			)}
 			<div id="pdf">
@@ -23,7 +46,7 @@ function App() {
 						</div>
 					</div>
 					<div id="header-middle">
-						<p>William Kwok</p>
+						<p>Cesar Granda</p>
 					</div>
 					<div id="header-right">
 						<div>
@@ -39,7 +62,7 @@ function App() {
 				</div>
 				<div class="section">
 					<div class="section-header">
-						<i class="fa fa-graduation-cap"></i> EDUCATION
+						<i class="fa fa-graduation-cap"></i> EDUCATION Levels
 					</div>
 					<div class="item">
 						<div class="item-header">
@@ -58,110 +81,10 @@ function App() {
 					<div class="section-header">
 						<i class="fa fa-briefcase"></i> EXPERIENCE
 					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Job 1</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-						</ul>
-					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Job 2</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-						</ul>
-					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Job 3</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-						</ul>
-					</div>
-				</div>
+					
+					<ComplexList/>
 
-				<div class="section">
-					<div class="section-header">
-						<i class="fa fa-code"></i> PROJECTS
-					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Project 1</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-						</ul>
-					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Project 2</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-						</ul>
-					</div>
-					<div class="item">
-						<div class="item-header">
-							<div class="item-title">Project 3</div>
-							<div class="item-date">Sept 2016 - Jun 2020</div>
-						</div>
-						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et.</li>
-							<li>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est.</li>
-							<li>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat.</li>
-						</ul>
-					</div>
+					
 				</div>
 
 				<div class="section">
