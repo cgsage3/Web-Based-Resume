@@ -26,7 +26,7 @@ function App() {
             <div class="section row">
                 <h1 class="col"><span class="myname">Cesar Granda</span> </h1>
                 <div class="contact-info col-right">
-                    <div>201 . 920 . 0729</div>
+                    <div>347 . 495 . 4107</div>
                     <div><a href="mailto:info@cgranda.com">info@cgranda.com</a></div>
                     <div><a href="http://cgranda.com">cgranda.com</a></div>
                 </div>
