@@ -1,22 +1,13 @@
-body, html {
-	background-color: gray;
-	padding: 0px;
-	margin: 0px;
-}
-body { 
-	margin: 0;
-    padding: 0;
-	background-color: #fff;
-	font-size: 12px;
-	font-family: 'Source Sans Pro', sans-serif;
-	-webkit-font-smoothing: subpixel-antialiased;
+body { margin: 0;
+       padding: 0;
+       background-color: #fff font-size: 12px;
+       font-family: 'Source Sans Pro', sans-serif;
+       -webkit-font-smoothing: subpixel-antialiased;
 }
 * { box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-.myname {
-	font-weight:700;
-}
+
 /*
  Primary Rules
 */
@@ -26,22 +17,21 @@ h1 { font-weight: 300;
      color:#ba0018;
      padding: 0 10px 10px;
      border-radius:2px;
-    font-family: 'Poppins', serif;
+    font-family: 'Merriweather', serif;
 }
 h2 { color: #ba0018;
-/*     width: 150px;*/
-	width: 100%;
+     width: 150px;
      font-size: 18px;
      padding-left: 20px;
      padding-top: 12px;
      font-weight:700;
-     font-family: 'Poppins', serif;
+     font-family: 'Merriweather', serif;
 }
 h3 { font-size: 18px;
      font-weight: bold;
      margin-bottom: 0;
      line-height: 28px;
-     font-family: 'Poppins', serif;
+     font-family: 'Merriweather', serif;
 }
 h2, h3 { margin-top: 5px }
 a { color: #ba0018;
@@ -70,14 +60,11 @@ a:hover {
            padding: 10px 0 15px;
 }
 .section:last-child { border: none }
-.section-text { 
-/*	width: 80%;*/
-	width: 100%;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 10px 0 10px;
-/*    padding: 0 10px;*/
-    padding: 0 27px;
+.section-text { width: 80%;
+                font-size: 18px;
+                line-height: 24px;
+                margin: 10px 0 10px;
+                padding: 0 10px;
 }
 .subsection { margin: 10px 0 5px }
 .desc { font-size: 16px; font-family: 'Source Sans Pro', sans-serif; color:#444;}
@@ -100,12 +87,7 @@ ul.skills{
   padding-left:0px;
   margin: 0 20px 0 0;
 }
-.skills.one {
-	width:25%;
-}
-.skills.two {
-	width:35%;
-}
+
 ul.skills li{
   list-style: none;
   font-size:16px;
@@ -119,25 +101,22 @@ ul.skills li:last-child{
 /*
  Float Rules
 */
-.row:before, .row:after { 
-	content: "";
-    display: table;
+.row:before, .row:after { content: "";
+                          display: table;
 }
 .row:after { clear: both }
 .col { float: left }
-.col-right { 
-	float: right 
-}
+.col-right { float: right }
 
 /*
  Page Rules
 */
-.page { 
-/*	width: 1000px;   
-    min-height: 29.7cm;
-*/	margin: 1cm auto;
-	background: white;
-	padding: 20px 10px;
+.page { width: 1000px;
+        min-height: 29.7cm;
+        margin: 1cm auto;
+
+        background: white;
+        padding: 20px 50px;
 }
 .subpage { padding: 1cm;
            border: 1px red solid;
@@ -160,7 +139,7 @@ ul.skills li:last-child{
     }
     .page-break{
       page-break-before: always;
-      padding-top:150px;
+      padding-top:30px;
     }
 
     body { font-size: 12pt;}
@@ -170,84 +149,26 @@ ul.skills li:last-child{
 
     h2{
       font-size:10pt;
-/*      width: 3cm;*/
+      width: 3cm;
       padding-left: 10px;
     }
 
     h3 { font-size: 10pt; line-height:11pt}
-}
 
-#pdf {
-	/* 96 ppi */
-/*	height: 1056px;*/
-	width: 816px;
-	background-color: white;
-/*	font-family: 'Quicksand', sans-serif;*/
-}
+    .section-text { font-size: 9pt; line-height: 14pt; }
 
-#header {
-	display: flex;
-}
+    .light { font-size: 7.5pt; line-height:12pt; color:#ddd; }
+    
+    .page { width: 21cm }
+    ul {margin:5px 0 0}
+    .section { padding: 5px 0 8px }
+    .section-text { width: 15cm; margin: 5px 0 5px;}
+    .subsection { margin: 5px 0 0 }
+    .desc { font-size: 9pt }
+    
+    .contact-info { font-size: 9pt}
+    
+    ul.skills{margin: 0 10px 0 0;}
+    ul.skills li{ font-size: 9pt; margin-bottom:0}
 
-#header-left {
-	width: 25%;
-	padding: 10px;
-}
-
-#header-middle {
-	display: flex;
-	width: 50%;
-	/* margin: auto;
-	text-align: center; */
-}
-
-#header-middle p {
-	margin: auto;
-	font-size: 45px;
-	font-weight: bold;
-}
-
-#header-right {
-	width: 25%;
-	padding: 10px;
-	text-align: right;
-}
-
-a {
-	/*text-decoration: none;
-	color: black;*/
-}
-
-.section {
-	padding: 5px 10px 0px 10px;
-	padding-bottom: 0px;
-}
-
-.section-header {
-	border-bottom: 2px solid black;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.item-header {
-	display: flex;
-	padding-top: 5px;
-}
-
-.item-title {
-	width: 80%;
-}
-
-.item-date {
-	width: 20%;
-}
-
-.item ul {
-	/* padding: 0; */
-	padding-left: 20px;
-	margin: 0;
-}
-
-.job-desc {
-	white-space: pre-line;
 }
