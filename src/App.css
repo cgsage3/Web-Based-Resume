@@ -221,7 +221,7 @@ a {
 
 .section {
 	padding: 5px 10px 0px 10px;
-	padding-bottom: 5px;
+	padding-bottom: 0;
 }
 .section:first-child {
     padding-top: 0;
