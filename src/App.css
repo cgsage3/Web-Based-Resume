@@ -254,3 +254,18 @@ a {
 .job-desc {
 	white-space: pre-line;
 }
+
+.address {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 20px 0;
+    padding-bottom: 5px;
+    width: 796px;
+    position: relative;
+    left: 10px;    
+}
+.address p {
+    margin: 0;
+}
+.coverletter {
+    margin: 0;
+}

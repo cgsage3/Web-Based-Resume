@@ -1,8 +1,10 @@
 import './App.css';
+import Bio from "./components/bio.js";
 import Education from "./components/education.js";
 import Experience from "./components/experience.js";
 // import Interests from "./components/interests.js";
 import Skills from "./components/skills.js";
+import Cover from "./components/cover.js";
 // import Honors from "./components/honors.js";
 // import Projects from "./components/projects.js";
 
@@ -31,19 +33,12 @@ function App() {
                     <div><a href="http://cgranda.com">cgranda.com</a></div>
                 </div>
             </div>
-
-            <div class="section row">
-                <h2 class="col">Bio</h2>
-                <div class="section-text col-right row">
-                	<div>I am a web developer with 8+ years of experience in front-end and back-end development I employ many languages and frameworks. I am Passionate about building excellent web applications utilizing innovative and cutting-edge solutions.</div>
-                </div>
-            </div>
             
-            <Skills />
+            <Bio/>
             <Education/>
-            <Experience/>            
-
-
+            <Experience/>
+            <Skills/>
+            {/*<Cover/>*/}
         </div>
 			</div>
 		</div>
