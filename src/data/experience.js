@@ -8,6 +8,8 @@ module.exports = [
       "Held regular training sessions on content editing, plugin usage and general troubleshooting for web content editors who managed and edited the University’s web site.",
       "Developed a Web App used to display the University’s faculty profiles with an Oracle database back-end importing daily data from a third-party JSON API using a cron Job, and coded the front-end of the App using SQL, JavaScript, CSS and a custom PHP framework.",
       "Worked on .NET application using C#, SQL and an Oracle database with the end goal of creating a workflow for Instructors, Student Disability Department and Students to schedule exam proctoring within the application.",
+      "Collaborated closely with cross-functional teams, including QA, project management, and UX/UI, to deliver high-quality applications on time.",
+      "Mentored and provided technical guidance to junior developers, fostering their growth and development.",
       "Made sure all applications and websites were accessible by adhering to ADA and WCAG guidelines on accessibility.",
       "Developed sites using WordPress Multisite and utilizing Custom Post Types (CPT) and Advanced Custom Fields (ACF) in order fulfill institutional requirements.",
       "Migrated legacy content from thousands of static HTML files into MySQL database via PHP and SQL so editors could manipulate content within an CMS, in this case WordPress.",
@@ -16,7 +18,9 @@ module.exports = [
       "Extensive experience dealing with technical/web issues via helpdesk tickets and explaining technical information to a non-technical audience.",
       "Created a tuition calculator application to display tuition costs to prospective students using JavaScript, PHP and SCSS.",
       "Developed a search app for the Library that retrieved data from multiple third-party software and APIʼs so students could find library materials for their specific needs.",
-      "Implemented a git workflow for all projects to go from development to staging and finally production.",
+      "Implemented a git workflow for all projects to go from development to staging to production.",
+      "Implemented and maintained database schemas, ensuring data integrity and efficient data retrieval.",
+      "Assisted in the evaluation and selection of technologies and tools for application development projects."
     ],
   },
   {
@@ -28,9 +32,11 @@ module.exports = [
       "Scoped work activities, established priorities, set schedules and deadlines while tracking and monitoring progress of team to proactively identify and resolve issues and obstacles and ensure timely completion of multiple time-sensitive work activities with limited resources.",
       "Aided with training and technical guidance to team members such as teaching Back-end setups for LEMP and LAMP stacks and implementing WordPress for Front-end setups.",
       "Developed technical alternatives after identifying relevant stakeholders needs and performing analyses to brief senior staff on the recommended course of action.",
+      "Conducted code reviews and provided feedback to ensure code quality and adherence to coding standards.",
+      "Conducted performance optimizations and code refactoring to enhance application efficiency and scalability.",
       "Developed and deployed cloud solutions with Continuous Integration and Continuous Delivery [CI/CD.]",
       "Set-up and maintained Linux servers used on all projects.",
-      "Coded apps using Node.js,  React, and Express.",
+      "Coded apps using Node.js,  React, and Next.js.",
       "Developed all apps and websites using the OOP model.",
     ]
   },
@@ -39,6 +45,7 @@ module.exports = [
     position: "Junior Web Developer",
     compnayName: "Team 7 Media Inc",
     details: [
+      "Worked closely with clients to understand their requirements and deliver solutions that meet their needs.",
       "Created landing pages for products and services using PHP, JavaScript, HTML and CSS.",
       "Utilized GIT on all project development.",
       "Developed apps and websites using Laravel php framework, Bootstrap, jQuery for Front-end",            

@@ -81,15 +81,22 @@ a:hover {
     padding: 0 0 0 20px;
 }
 .subsection { margin: 10px 0 5px }
-.desc { font-size: 16px; font-family: 'Source Sans Pro', sans-serif; color:#444;}
-.contact-info { font-size: 16px;
-                text-align: right;
+.desc { 
+    font-size: 16px; 
+    font-family: 'Source Sans Pro', sans-serif; 
+    color:#101010;
 }
-.light { color: #aaa;letter-spacing:1px;
-         font-size: 14px;
-         line-height:28px;
-         font-family: 'Source Sans Pro', sans-serif;
-         text-transform:uppercase;
+.contact-info { 
+    font-size: 16px;
+    text-align: right;
+}
+.light { 
+    color: #8b8b8b;
+    letter-spacing:1px;
+    font-size: 14px;
+    line-height:28px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform:uppercase;
 }
 ul{
   padding-left:15px;
@@ -97,15 +104,16 @@ ul{
 
 ul.skills{
   float:left;
-  width:30%;
+  width:45%;
   padding-left:0px;
-  margin: 0 20px 0 0;
+  margin: 0 60px 40px 0;
 }
 .skills.one {
-	width:25%;
+/*	width:25%;*/
 }
 .skills.two {
-	width:35%;
+/*	width:40%;*/
+margin-right: 0;
 }
 ul.skills li{
   list-style: none;
@@ -116,7 +124,9 @@ ul.skills li{
 ul.skills li:last-child{
   margin:0;
 }
-
+.skill-title {
+    font-size: 16px;
+}
 /*
  Float Rules
 */
