@@ -17,6 +17,9 @@ body {
 .myname {
 	font-weight:700;
 }
+.bio-text {
+    font-size: 16px;
+}
 /*
  Primary Rules
 */

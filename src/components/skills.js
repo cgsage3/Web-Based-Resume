@@ -16,8 +16,8 @@ const Skills = () => (
 			<li>Node.js & React</li>	
 			<li>Next.js & Gatsby</li>	
 			<li>WordPress</li>
-			<li>Laravel</li>
-			<li>Bootstrap</li>
+			<li>PHPStorm</li>
+			<li>Visual Studio</li>
 			<li>Git</li>
 		</ul>
 		<ul class="skills">
