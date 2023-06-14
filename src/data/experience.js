@@ -15,7 +15,7 @@ module.exports = [
       "Developed sites using WordPress Multisite while utilizing Custom Post Types (CPT) and Advanced Custom Fields (ACF) in order fulfill institutional requirements.",
       "Migrated legacy content from thousands of static HTML files into MySQL database via PHP and SQL so editors could manage content within WordPress.",
       "Maintained documentation of all web properties and apps in a wiki powered by Confluence that over 40 stakeholders and editors used as reference guides.",
-      "Created technical documentation of applications and websites including dependencies required, libraries used and database information among other techinical guidance.",
+      "Created technical documentation of applications and websites including dependencies required, libraries used and database information among other technical guidance.",
       "Extensive experience dealing with technical/web issues via helpdesk tickets and explaining technical information to a non-technical audience.",
       "Created a tuition calculator application to display tuition costs to prospective students using JavaScript, PHP and SCSS.",
       "Implemented a git workflow for all projects to go from development to staging to production.",
