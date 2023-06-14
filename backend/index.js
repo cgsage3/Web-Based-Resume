@@ -1,6 +1,7 @@
 // To connect with your mongoDB database
+require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://info:Granar123@cgresume.cieo048.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true } )
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true } )
 
 .then(() => console.log('Connected Successfully'))
 
@@ -24,7 +25,7 @@ const experienceSchema = new mongoose.Schema({
         unique: true,
     },
     details: {
-        type: String,
+        type: [String],
         unique: true,
     },
   
@@ -58,7 +59,7 @@ app.use(cors());
 app.get("/", (req, resp) => {
  
     resp.send("App is Working");
-    Exprerience.createIndexes();
+    // Exprerience.createIndexes();
     // You can check backend is working or not by
     // entering http://loacalhost:5000
      
