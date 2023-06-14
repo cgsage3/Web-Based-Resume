@@ -8,7 +8,6 @@
 		"@testing-library/user-event": "^12.1.10",
 		"dotenv": "^16.1.4",
 		"mongodb": "^5.6.0",
-		"nodemon": "^2.0.22",
 		"puppeteer": "^5.5.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
@@ -47,6 +46,7 @@
 		]
 	},
 	"devDependencies": {
-		"live-server": "^1.2.1"
+		"live-server": "^1.2.1",
+		"nodemon": "^2.0.22"
 	}
 }
