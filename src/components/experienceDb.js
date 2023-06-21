@@ -6,7 +6,7 @@ useEffect(()=> {
 }, [])
 
 const experienceMDB = async () => {
-    const response = await fetch('http://localhost:5000/xp');
+    const response = await fetch('https://resume-mern.onrender.com/xp');
 
     setName(await response.json())
 }
