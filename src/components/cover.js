@@ -37,7 +37,7 @@ function Cover() {
                         {cover.map((val) => (
                         <>
                                 <div key={val._id}> 
-                                {paramCName == val.coverName  && (
+                                {paramCName === val.coverName  && (
                                     <>
                                     <h4>Dear {val.dear},</h4>
                                       {parse(val.letter)}
