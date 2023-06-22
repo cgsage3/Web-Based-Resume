@@ -1,12 +1,6 @@
 import { useState, useEffect } from 'react';
 function ExperienceDb() {
-
-function split(v){
-    var x = v[0].split('./').filter(r => r !== '')
-    console.log(x)
-    return x
-}
-    return (
+    
 const [name, setName] = useState([]);
 useEffect(()=> {
     experienceMDB()
@@ -17,7 +11,14 @@ const experienceMDB = async () => {
 
     setName(await response.json())
 }
-console.log(name);        
+console.log(name);   
+function split(v){
+    var x = v[0].split('./').filter(r => r !== '')
+    console.log(x)
+    return x
+}
+    return (
+     
         <>
     <div class="section row">
         <h2 class="col">Experience</h2>         
