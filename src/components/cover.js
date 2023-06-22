@@ -15,32 +15,42 @@ const Cover = () => (
             </div>
             <div class="col">        
             <h4>Dear Executive Director of Web Services,</h4>
-            <p> I am writing to express my enthusiasm for the Senior PHP Developer at PCS, as advertised on your website. 
-            With over 8 years of software development experience, a strong background 
-            in application design and development, troubleshooting skills, and excellent attention to detail, 
-            I am confident in my ability to contribute to the success of your team.</p>
-            <p>Over the course of my career, I have honed my skills using a wide range of tools and technologies. 
-            I have accumulated 8+ years of software development experience utilizing tools such as PHPStorm, Javascript, React, GIT, Docker, Linux/UNIX, 
-            Scripting (Tooling), and various databases including MySQL/MariaDB/Postgres. I am proficient 
-            in developing applications using languages such as PHP, Javascript, Bash, and C# with a 
-            focus on object-oriented programming (OOP) principles.</p>
-            <p>Troubleshooting is one of my key strengths, and I possess strong problem-solving skills. 
-            I have extensive experience working with the Laravel framework, PHPUnit, and RobotFramework, allowing me to 
-            efficiently debug and resolve issues. Moreover, my knowledge of object-oriented analysis and design, along with a solid 
-            understanding of common design patterns, enables me to develop robust and scalable applications.</p>
-            <p>Relational databases are a fundamental aspect of modern applications, 
-            and I have a comprehensive understanding of them. I am well-versed in database management, optimization, and querying,
-            ensuring efficient data storage and retrieval. Additionally, 
-            I have hands-on experience working with and developing custom APIs, 
-            allowing for seamless integration with external systems and services.</p>
-            <p>Effective communication is vital in collaborating with team members and stakeholders, 
-            and I pride myself on my exceptional communication skills. I pay meticulous attention to detail, 
-            ensuring clear and concise communication to facilitate efficient teamwork and project execution. 
-            I am committed to delivering high-quality work that meets or exceeds expectations.
-            </p>
-            <p>I am excited about the opportunity to join PCS and contribute to its mission in improving the management of ground transportation across the country. 
-            I am confident that my technical skills, problem-solving abilities, collaboration aptitude, 
-            and experience working in similar environments make me an ideal candidate for this position.</p>
+            <p>I am writing to express my strong interest in the position of 
+            Design and Development Engineer at Susan G. Komen. With my extensive experience in 
+            client-side and server-side development, database design, and cloud modules, I am confident
+            in my ability to contribute to your team and drive the success of your projects.</p>
+
+            <p>Throughout my career, I have demonstrated a proven track record in designing and developing robust 
+            software solutions. I have successfully designed and implemented complex database schemas, 
+            ensuring efficient data storage and retrieval. My leadership skills have allowed me to provide 
+            guidance and direction for testing software, guaranteeing the delivery of high-quality, responsive, 
+            and efficient applications.</p>
+
+            <p>I am highly proficient in developing APIs and possess a deep understanding of 
+            troubleshooting and debugging techniques. My expertise extends to mentoring and coaching 
+            fellow developers, enabling them to enhance their skills and deliver exceptional results. 
+            I am committed to staying updated with the latest industry trends and have hands-on experience 
+            in using responsive web development principles, including CSS/JS frameworks such as Bootstrap 
+            and Foundation.</p>
+
+            <p>Moreover, I have a strong background in requirements analysis, utilizing techniques 
+            like user stories, use cases, and informal modeling. I have also built highly-scalable web 
+            applications and cloud-native applications, leveraging my in-depth knowledge of developing 
+            user interfaces that seamlessly communicate with APIs. With over 10 years of experience in 
+            middle-tier and back-end languages, including PHP and C# .NET, I possess the technical 
+            expertise to meet the demands of this role. Additionally, I have 8+ years of experience 
+            in front-end languages and libraries, such as HTML/CSS, JavaScript, XML, and jQuery. 
+            My proficiency in data modeling further enhances my ability to contribute 
+            effectively to your projects.</p>
+
+            <p>My passion for continuous learning and growth 
+            drives me to seek innovative solutions and stay at the forefront of technological advancements.</p>
+
+            <p>I am excited about the opportunity to join the talented team at Susan G. Komen
+            and contribute to its ongoing success. Thank you for considering my application. 
+            I would welcome the chance to discuss further how my skills and experience align 
+            with your needs. Please find my attached resume for more information.</p>
+
             <p>Please feel free to contact me at your convenience.Thank you for your time and consideration.</p>
 
             <p>Sincerely,</p>

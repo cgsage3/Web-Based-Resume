@@ -24,30 +24,31 @@ function App() {
 			{!resumeOnlyMode && (
 				<div id="other-body-stuff">
 					Hi stuff goes here and there. Everywhere.
+            <Exp/>                
 				</div>
 			)}
 			<div id="pdf">
-        <div class="page">
-            <div class="section row">
-                <h1 class="col"><span class="myname">Cesar Granda</span> </h1>
-                <div class="contact-info col-right">
-                    <div>347 . 495 . 4107</div>
-                    <div><a href="mailto:info@cgranda.com">info@cgranda.com</a></div>
-                    <div><a href="http://cgranda.com">cgranda.com</a></div>
+                <div class="page">
+                    <div class="section row">
+                        <h1 class="col"><span class="myname">Cesar Granda</span> </h1>
+                        <div class="contact-info col-right">
+                            <div>347 . 495 . 4107</div>
+                            <div><a href="mailto:info@cgranda.com">info@cgranda.com</a></div>
+                            <div><a href="http://cgranda.com">cgranda.com</a></div>
+                        </div>
+                    </div>
+                    
+                    <Bio/>
+                    <Education/>
+                    <ExperienceDb/>            
+                    <Skills/>
+                    {/*<Cover/>*/}
                 </div>
-            </div>
-            
-            <Bio/>
-            <Education/>
-            <ExperienceDb/>            
-            <Skills/>
-            {/*<Cover/>*/}
-        </div>
-            <Exp/>
-            <br/>
-            <br/>
-            <br/>
+
 			</div>
+            <br/>
+            <br/>
+            <br/>            
 		</div>
 	);
 }

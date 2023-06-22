@@ -4,13 +4,13 @@ const puppeteer = require('puppeteer');
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
 
-	await page.goto("http://localhost:4000?resumeonly=true", {
+	await page.goto("https://web-based-reume-front.onrender.com?resumeonly=true", {
 		waitUntil: "networkidle2"
 	});
 
 
 	await page.pdf({
-		path: "output/resume.pdf",
+		path: "public/resume.pdf",
 		format: "Letter",
 		printBackground: true
 	});
