@@ -17,11 +17,12 @@ function App() {
 	const url = new URL(window.location.href);
 	const params = new URLSearchParams(url.search);
 	const resumeOnlyMode = params.get('resumeonly');
+    const coverOnlyMode = params.get('coveronly');
 
 
 	return (
 		<div className="App">
-			{!resumeOnlyMode && (
+			{!coverOnlyMode && !resumeOnlyMode && (
 				<div id="other-body-stuff">
 					Hi stuff goes here and there. Everywhere.
             <Exp/>                
@@ -38,14 +39,22 @@ function App() {
                         </div>
                     </div>
                     
+            {!coverOnlyMode && (
+                <>
                     <Bio/>
                     <Education/>
                     <ExperienceDb/>            
                     <Skills/>
-                    {/*<Cover/>*/}
+                </>
+            )}
+            {coverOnlyMode && (
+            <>
+                <Cover/>
+            </>
+            )}       
                 </div>
 
-			</div>          
+			</div> 
 		</div>
 	);
 }
