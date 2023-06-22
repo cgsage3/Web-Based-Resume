@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 function ExperienceDb() {
-const [name, setName] = useState([]);
-useEffect(()=> {
-    experienceMDB()
-}, [])
+    const [name, setName] = useState([]);
+    useEffect(()=> {
+        experienceMDB()
+    }, [])
 
-const experienceMDB = async () => {
-    const response = await fetch('https://resume-mern.onrender.com/xp');
+    const experienceMDB = async () => {
+        const response = await fetch('https://resume-mern.onrender.com/xp');
 
-    setName(await response.json())
-}
-console.log(name);   
-function split(v){
-    var x = v[0].split('./').filter(r => r !== '')
-    console.log(x)
-    return x
-}
+        setName(await response.json())
+    }
+    console.log(name);   
+    function split(v){
+        var x = v[0].split('./').filter(r => r !== '')
+        console.log(x)
+        return x
+    }
     return (
      
         <>

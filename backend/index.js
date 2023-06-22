@@ -46,8 +46,26 @@ const UserSchema = new mongoose.Schema({
         default: Date.now,
     },
 });
+
+// Schema for cover letter
+const coverSchema = new mongoose.Schema({
+    coverName: {
+        type: String,
+        required: true,
+    },
+    dear: {
+        type: String,
+    },
+    letter: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    createdOn: Date
+});
 const User = mongoose.model('users', UserSchema);
 const Exprerience = mongoose.model('newexp', experienceSchema);
+const Cover = mongoose.model('coverLetter', coverSchema);
  
 // For backend and express
 const express = require('express');
@@ -60,11 +78,30 @@ app.get("/", (req, resp) => {
  
     resp.send("App is Working");
     // Exprerience.createIndexes();
+    // Cover.createIndexes();
     // You can check backend is working or not by
     // entering http://loacalhost:5000
      
     // If you see App is working means
     // backend working properly
+});
+
+app.post("/add-cover", async (req, resp) => {
+    try {
+        const cov = new Cover(req.body);
+        let coverR = await cov.save();
+        coverR = coverR.toObject();
+        if (coverR) {
+            delete coverR.password;
+            resp.send(req.body);
+            console.log(coverR);
+        } else {
+            console.log("cover already added");
+        }
+ 
+    } catch (e) {
+        resp.send("Something Went Wrong");
+    }
 });
 
 app.post("/add", async (req, resp) => {
@@ -90,6 +127,16 @@ app.get("/fetch", async (req, res) => {
     const u = await User.find({ });
     res.send(u);
     console.log(u);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/fetch-cover", async (req, res) => {
+  try {
+    const c = await Cover.find({ });
+    res.send(c);
+    console.log(c);
   } catch (err) {
     console.log(err);
   }

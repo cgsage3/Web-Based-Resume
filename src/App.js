@@ -1,13 +1,14 @@
 import './App.css';
 import Bio from "./components/bio.js";
 import Education from "./components/education.js";
-import Experience from "./components/experience.js";
+// import Experience from "./components/experience.js";
 import ExperienceDb from "./components/experienceDb.js";
 // import Interests from "./components/interests.js";
 import Skills from "./components/skills.js";
 import Cover from "./components/cover.js";
 // import Form from "./components/form.js";
-import Exp from "./components/exp.js";
+// import Exp from "./components/exp.js";
+import CoverAdd from "./components/coverAdd.js";
 // import Honors from "./components/honors.js";
 // import Projects from "./components/projects.js";
 
@@ -20,12 +21,13 @@ function App() {
     const coverOnlyMode = params.get('coveronly');
 
 
+
 	return (
 		<div className="App">
 			{!coverOnlyMode && !resumeOnlyMode && (
 				<div id="other-body-stuff">
 					Hi stuff goes here and there. Everywhere.
-            <Exp/>                
+            <CoverAdd/>                
 				</div>
 			)}
 			<div id="pdf">
@@ -39,19 +41,19 @@ function App() {
                         </div>
                     </div>
                     
-            {!coverOnlyMode && (
-                <>
-                    <Bio/>
-                    <Education/>
-                    <ExperienceDb/>            
-                    <Skills/>
-                </>
-            )}
-            {coverOnlyMode && (
-            <>
-                <Cover/>
-            </>
-            )}       
+                    {!coverOnlyMode && (
+                        <>
+                            <Bio/>
+                            <Education/>
+                            <ExperienceDb/>            
+                            <Skills/>
+                        </>
+                    )}
+                        <Cover/>
+                    {coverOnlyMode && (
+                    <>
+                    </>
+                    )}       
                 </div>
 
 			</div> 
