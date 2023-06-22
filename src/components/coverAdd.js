@@ -7,7 +7,7 @@ function CoverAdd() {
     const handleOnSubmit = async (e) => {
         e.preventDefault();
         let result = await fetch(
-        'http://localhost:5000/add-cover', {
+        'https://resume-mern.onrender.com/add-cover', {
             method: "post",
             body: JSON.stringify({ coverName, dear, letter}),
             headers: {

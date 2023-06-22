@@ -13,7 +13,7 @@ function Cover() {
     }, [])
 
     const coverMDB = async () => {
-        const response = await fetch('http://localhost:5000/fetch-cover');
+        const response = await fetch('https://resume-mern.onrender.com/fetch-cover');
 
         getCover(await response.json())
     }
