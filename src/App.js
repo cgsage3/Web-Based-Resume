@@ -5,10 +5,10 @@ import Education from "./components/education.js";
 import ExperienceDb from "./components/experienceDb.js";
 // import Interests from "./components/interests.js";
 import Skills from "./components/skills.js";
-import Cover from "./components/cover.js";
+// import Cover from "./components/cover.js";
 // import Form from "./components/form.js";
 // import Exp from "./components/exp.js";
-import CoverAdd from "./components/coverAdd.js";
+// import CoverAdd from "./components/coverAdd.js";
 // import Honors from "./components/honors.js";
 // import Projects from "./components/projects.js";
 
