@@ -8,7 +8,7 @@ function Exp() {
     const handleOnSubmit = async (e) => {
         e.preventDefault();
         let result = await fetch(
-        'http://localhost:5000/add', {
+        'https://resume-mern.onrender.com/add', {
             method: "post",
             body: JSON.stringify({ year, position, companyName, details }),
             headers: {

@@ -45,10 +45,7 @@ function App() {
                     {/*<Cover/>*/}
                 </div>
 
-			</div>
-            <br/>
-            <br/>
-            <br/>            
+			</div>          
 		</div>
 	);
 }
