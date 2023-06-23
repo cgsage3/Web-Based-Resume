@@ -160,22 +160,21 @@ app.get("/xp", async (req, res) => {
 
 app.use('/r-pdf/covername/:id', (req, res, next) => {
     // Launching the Puppeteer controlled headless browser and navigate to the Digimon website
-    console.log(req.params.id);
+    url="https://web-based-reume-front.onrender.com?coveronly=true&covername=" + req.params.id;
+    loc="cover"+req.params.id+".pdf";
+    console.log(url);
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({});
     const rPage = await browser.newPage();
     const cPage = await browser.newPage();
 
 
-    await cPage.goto("https://web-based-reume-front.onrender.com?coveronly=true&covername={req.params.id}", {
+    await cPage.goto(url, {
         waitUntil: "networkidle0"
     });
 
-    await cPage.waitForSelector('.col', {
-      visible: true,
-    });
     await cPage.pdf({
-        path: "cover.pdf",
+        path: loc,
         format: "Letter",
         printBackground: true
     });
@@ -183,7 +182,12 @@ app.use('/r-pdf/covername/:id', (req, res, next) => {
     await browser.close();
 })();
 next()
+}, (req, res, next) => {
+  res.send('Printing Pdf')
+  next()
 })
+
+
 app.post("/register", async (req, resp) => {
     try {
         const user = new User(req.body);
