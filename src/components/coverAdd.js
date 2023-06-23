@@ -37,6 +37,13 @@ function CoverAdd() {
                 <button type="submit"
                 onClick={handleOnSubmit}>submit</button>
             </form>
+<h3>To generate cover letter pdf click here:</h3>
+    <button onClick={() => {
+      window.open("p-pdf/covername/", "_blank");
+    }}>Print Cover Letter</button>
+        
+    <h3><a href="https://resume-mern.onrender.com/cover.pdf" target="_blank">View Cover Letter</a></h3>
+
 
         </>
     );

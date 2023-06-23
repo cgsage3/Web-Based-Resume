@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 function ExpAdd() {
     const [year, setYear] = useState("");
     const [position, setPos] = useState("");
@@ -41,6 +41,12 @@ function ExpAdd() {
                 <button type="submit"
                 onClick={handleOnSubmit}>submit</button>
             </form>
+<h3>To generate resume pdf click here:</h3>
+    <button onClick={() => {
+      window.open("https://resume-mern.onrender.com/p-pdf/resume", "_blank");
+    }}>Print Resume</button>
+        
+    <h3><a href="https://resume-mern.onrender.com/resume.pdf" target="_blank">View Resume</a></h3>
 
         </>
     );
