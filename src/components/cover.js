@@ -31,8 +31,6 @@ function Cover() {
             <h2 class="coverletter">Cover Letter</h2>
 
             <div class="section-text col-right row">
-                    <div class="col">
-                    </div>
                     <div class="col">                            
                         {cover.map((val) => (
                         <>
@@ -40,7 +38,9 @@ function Cover() {
                                 {paramCName === val.coverName  && (
                                     <>
                                     <h4>Dear {val.dear},</h4>
+                                      <div id="cletter">
                                       {parse(val.letter)}
+                                      </div>
                                     </>
                                     )
                                 }                                    

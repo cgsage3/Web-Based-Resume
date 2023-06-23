@@ -1,6 +1,14 @@
 // To connect with your mongoDB database
 require('dotenv').config();
+const path = require('path');
 const mongoose = require('mongoose');
+const puppeteer = require('puppeteer'); // Adding Puppeteer
+// For backend and express
+const express = require('express');
+const app = express();
+const cors = require("cors");
+console.log("App listen at port 5000");
+
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true } )
 
 .then(() => console.log('Connected Successfully'))
@@ -67,16 +75,12 @@ const User = mongoose.model('users', UserSchema);
 const Exprerience = mongoose.model('newexp', experienceSchema);
 const Cover = mongoose.model('coverLetter', coverSchema);
  
-// For backend and express
-const express = require('express');
-const app = express();
-const cors = require("cors");
-console.log("App listen at port 5000");
+
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, resp) => {
  
-    resp.send("App is Working");
+    resp.send("App is working!");
     // Exprerience.createIndexes();
     // Cover.createIndexes();
     // You can check backend is working or not by
@@ -84,6 +88,7 @@ app.get("/", (req, resp) => {
      
     // If you see App is working means
     // backend working properly
+
 });
 
 app.post("/add-cover", async (req, resp) => {
@@ -153,6 +158,32 @@ app.get("/xp", async (req, res) => {
 });
 
 
+app.use('/r-pdf/covername/:id', (req, res, next) => {
+    // Launching the Puppeteer controlled headless browser and navigate to the Digimon website
+    console.log(req.params.id);
+(async () => {
+    const browser = await puppeteer.launch();
+    const rPage = await browser.newPage();
+    const cPage = await browser.newPage();
+
+
+    await cPage.goto("https://web-based-reume-front.onrender.com?coveronly=true&covername={req.params.id}", {
+        waitUntil: "networkidle0"
+    });
+
+    await cPage.waitForSelector('.col', {
+      visible: true,
+    });
+    await cPage.pdf({
+        path: "cover.pdf",
+        format: "Letter",
+        printBackground: true
+    });
+
+    await browser.close();
+})();
+next()
+})
 app.post("/register", async (req, resp) => {
     try {
         const user = new User(req.body);
@@ -171,3 +202,4 @@ app.post("/register", async (req, resp) => {
     }
 });
 app.listen(5000);
+
