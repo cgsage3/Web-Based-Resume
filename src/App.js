@@ -8,7 +8,7 @@ import Skills from "./components/skills.js";
 import Cover from "./components/cover.js";
 // import Form from "./components/form.js";
 // import Exp from "./components/exp.js";
-// import CoverAdd from "./components/coverAdd.js";
+import CoverAdd from "./components/coverAdd.js";
 // import Honors from "./components/honors.js";
 // import Projects from "./components/projects.js";
 
@@ -27,7 +27,7 @@ function App() {
 			{!coverOnlyMode && !resumeOnlyMode && (
 				<div id="other-body-stuff">
 					Hi stuff goes here and there. Everywhere.
-            {/*<CoverAdd/>*/}                
+            <CoverAdd/>              
 				</div>
 			)}
 			<div id="pdf">
