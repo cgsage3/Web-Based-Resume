@@ -23,7 +23,7 @@ function CoverAdd() {
     }
     return (
         <>
-            <h1>This is React WebApp </h1>
+            <h1>Add a cover letter </h1>
             <form action="">
                 <input type="text" placeholder="coverName"
                 value={coverName} onChange={(e) => setcoverName(e.target.value)} />

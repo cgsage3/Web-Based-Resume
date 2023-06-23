@@ -1,5 +1,5 @@
 import { useState } from 'react'
-function Exp() {
+function ExpAdd() {
     const [year, setYear] = useState("");
     const [position, setPos] = useState("");
     const [companyName, setCompanyName] = useState("");
@@ -24,7 +24,7 @@ function Exp() {
     }
     return (
         <>
-            <h1>This is React WebApp </h1>
+            <h1>Add Experiences</h1>
             <form action="">
                 <input type="text" placeholder="Year"
                 value={year} onChange={(e) => setYear(e.target.value)} />
@@ -45,4 +45,4 @@ function Exp() {
         </>
     );
 }
-export default Exp;
+export default ExpAdd;
