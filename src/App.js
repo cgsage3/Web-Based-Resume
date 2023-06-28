@@ -23,12 +23,13 @@ function App() {
 	const params = new URLSearchParams(url.search);
 	const resumeOnlyMode = params.get('resumeonly');
     const coverOnlyMode = params.get('coveronly');
+    const inputOnlyMode = params.get('inputonly');
 
 
 
 	return (
 		<div className="App">
-			{!coverOnlyMode && !resumeOnlyMode && (
+			{!coverOnlyMode && inputOnlyMode && !resumeOnlyMode && (
 				<div id="other-body-stuff">
 					Hi stuff goes here and there. Everywhere.
             <CoverAdd/> 
