@@ -1,5 +1,6 @@
 import './App.css';
 import Bio from "./components/bio.js";
+import BioDb from "./components/bioDb.js";
 import Education from "./components/education.js";
 // import Experience from "./components/experience.js";
 import ExperienceDb from "./components/experienceDb.js";
@@ -7,6 +8,7 @@ import ExperienceDb from "./components/experienceDb.js";
 import Skills from "./components/skills.js";
 import Cover from "./components/cover.js";
 // import Form from "./components/form.js";
+import BioAdd from "./components/bioAdd.js";
 import ExpAdd from "./components/expAdd.js";
 import CoverAdd from "./components/coverAdd.js";
 // import Honors from "./components/honors.js";
@@ -29,6 +31,7 @@ function App() {
 					Hi stuff goes here and there. Everywhere.
             <CoverAdd/> 
             <br/><br/>             
+            <BioAdd/>              
             <ExpAdd/>              
 				</div>
 			)}
@@ -45,7 +48,7 @@ function App() {
                     
                     {!coverOnlyMode && (
                         <>
-                            <Bio/>
+                            <BioDb/>
                             <Education/>
                             <ExperienceDb/>            
                             <Skills/>

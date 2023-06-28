@@ -29,13 +29,13 @@ function ExpAdd() {
                 <input type="text" placeholder="Year"
                 value={year} onChange={(e) => setYear(e.target.value)} />
 
-                <input type="position" placeholder="Position"
+                <input type="text" placeholder="Position"
                 value={position} onChange={(e) => setPos(e.target.value)} />
 
-                <input type="companyName" placeholder="Company Name"
+                <input type="text" placeholder="Company Name"
                 value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
                 
-                <textarea rows="4" cols="50" type="details" placeholder="Details"
+                <textarea rows="4" cols="50" type="text" placeholder="Details"
                 value={details} onChange={(e) => setDetails(e.target.value)} />
                 
                 <button type="submit"

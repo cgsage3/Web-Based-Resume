@@ -16,6 +16,18 @@ mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopo
 .catch((err) =>err ? console.log(err) :
     console.log('Connected to yourDB-name database'));
 
+// Schema for info
+const infoSchema = new mongoose.Schema({
+    bio: {
+        type: String,
+        required: true,
+    },
+    dateAdded: {
+        type: Date,
+        default: Date.now
+    },
+  
+});
 // Schema for experience
 const experienceSchema = new mongoose.Schema({
     year: {
@@ -74,6 +86,7 @@ const coverSchema = new mongoose.Schema({
 const User = mongoose.model('users', UserSchema);
 const Exprerience = mongoose.model('newexp', experienceSchema);
 const Cover = mongoose.model('coverLetter', coverSchema);
+const Info = mongoose.model('info', infoSchema);
  
 
 app.use(express.json());
@@ -102,6 +115,24 @@ app.post("/add-cover", async (req, resp) => {
             console.log(coverR);
         } else {
             console.log("cover already added");
+        }
+ 
+    } catch (e) {
+        resp.send("Something Went Wrong");
+    }
+});
+
+app.post("/add-info", async (req, resp) => {
+    try {
+        const infoV = new Info(req.body);
+        let infoR = await infoV.save();
+        infoR = infoR.toObject();
+        if (infoR) {
+            delete infoR.password;
+            resp.send(req.body);
+            console.log(infoR);
+        } else {
+            console.log("Info already added");
         }
  
     } catch (e) {
@@ -139,7 +170,17 @@ app.get("/fetch", async (req, res) => {
 
 app.get("/fetch-cover", async (req, res) => {
   try {
-    const c = await Cover.find({ });
+    const b = await Cover.find({ });
+    res.send(b);
+    console.log(b);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/fetch-bio", async (req, res) => {
+  try {
+    const c = await Info.find({ });
     res.send(c);
     console.log(c);
   } catch (err) {
