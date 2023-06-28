@@ -28,6 +28,30 @@ const infoSchema = new mongoose.Schema({
     },
   
 });
+
+// Schema for education
+const eduSchema = new mongoose.Schema({
+    degree: {
+        type: String,
+    },        
+    field: {
+        type: String,
+    },    
+    institution: {
+        type: String,
+    },    
+    address: {
+        type: String,
+    },    
+    year: {
+        type: String,
+    },
+    dateAdded: {
+        type: Date,
+        default: Date.now
+    },
+  
+});
 // Schema for experience
 const experienceSchema = new mongoose.Schema({
     year: {
@@ -87,6 +111,7 @@ const User = mongoose.model('users', UserSchema);
 const Exprerience = mongoose.model('newexp', experienceSchema);
 const Cover = mongoose.model('coverLetter', coverSchema);
 const Info = mongoose.model('info', infoSchema);
+const Education = mongoose.model('education', eduSchema);
  
 
 app.use(express.json());
@@ -140,6 +165,23 @@ app.post("/add-info", async (req, resp) => {
     }
 });
 
+app.post("/add-edu", async (req, resp) => {
+    try {
+        const eduV = new Education(req.body);
+        let infoR = await eduV.save();
+        infoR = infoR.toObject();
+        if (infoR) {
+            resp.send(req.body);
+            console.log(infoR);
+        } else {
+            console.log("Education already added");
+        }
+ 
+    } catch (e) {
+        resp.send("Something Went Wrong");
+    }
+});
+
 app.post("/add", async (req, resp) => {
     try {
         const exp = new Exprerience(req.body);
@@ -183,6 +225,16 @@ app.get("/fetch-bio", async (req, res) => {
     const c = await Info.find({ });
     res.send(c);
     console.log(c);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/fetch-edu", async (req, res) => {
+  try {
+    const e = await Education.find({ });
+    res.send(e);
+    console.log(e);
   } catch (err) {
     console.log(err);
   }

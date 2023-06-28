@@ -14,7 +14,6 @@ function BioDb() {
 
 
     console.log(bio);
-    console.log(bio);
     return (
     <div class="section row">
                 <h2 class="col">Bio</h2>

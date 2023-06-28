@@ -2,6 +2,7 @@ import './App.css';
 import Bio from "./components/bio.js";
 import BioDb from "./components/bioDb.js";
 import Education from "./components/education.js";
+import EducationDb from "./components/educationDb.js";
 // import Experience from "./components/experience.js";
 import ExperienceDb from "./components/experienceDb.js";
 // import Interests from "./components/interests.js";
@@ -11,6 +12,7 @@ import Cover from "./components/cover.js";
 import BioAdd from "./components/bioAdd.js";
 import ExpAdd from "./components/expAdd.js";
 import CoverAdd from "./components/coverAdd.js";
+import EduAdd from "./components/eduAdd.js";
 // import Honors from "./components/honors.js";
 // import Projects from "./components/projects.js";
 
@@ -33,6 +35,7 @@ function App() {
             <br/><br/>             
             <BioAdd/>              
             <ExpAdd/>              
+            <EduAdd/>              
 				</div>
 			)}
 			<div id="pdf">
@@ -50,7 +53,7 @@ function App() {
                         <>
                             <BioDb/>
                             <ExperienceDb/>            
-                            <Education/>
+                            <EducationDb/>
                             <Skills/>
                         </>
                     )}

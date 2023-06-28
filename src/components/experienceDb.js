@@ -12,12 +12,33 @@ function ExperienceDb() {
 
         setName(await response.json())
     }
-    console.log(name);   
+    // numArray.sort(function(a, b) {
+    //   return a - b;
+    // });    
     function split(v){
         var x = v[0].split('./').filter(r => r !== '')
-        console.log(x)
+        // console.log(x)
         return x
     }
+// let objSorted = {}
+
+// name.forEach(function(item){
+//     let newN=Number(item.year.substring(0,4));
+// console.log(newN);
+//     objSorted[item[0]]=item[1]
+// })
+
+function compare( a, b ) {
+  if ( a.year < b.year ){
+    return 1;
+  }
+  if ( a.year > b.year ){
+    return -1;
+  }
+  return 0;
+}
+name.sort(compare)
+console.log(name);
     return (
      
         <>
