@@ -49,8 +49,8 @@ function App() {
                     {!coverOnlyMode && (
                         <>
                             <BioDb/>
-                            <Education/>
                             <ExperienceDb/>            
+                            <Education/>
                             <Skills/>
                         </>
                     )}
