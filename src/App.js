@@ -36,15 +36,16 @@ function App() {
             <BioAdd/>              
             <EduAdd/>              
             <ExpAdd/> 
-    <>
-    <h3>To generate resume pdf click here:</h3>
-    <button onClick={() => {
-      window.open("https://resume-mern.onrender.com/p-pdf/resume", "_blank");
-    }}>Print Resume</button>
-        
-    <h3><a href="https://resume-mern.onrender.com/resume.pdf" target="_blank">View Resume</a></h3>
+            <>
+            <br/><br/> 
+            <h3>To generate resume pdf click here:</h3>
+            <button onClick={() => {
+              window.open("https://resume-mern.onrender.com/p-pdf/resume", "_blank");
+            }}>Print Resume</button>
+                
+            <h3><a href="https://resume-mern.onrender.com/resume.pdf" target="_blank">View Resume</a></h3>
 
-    </>                         
+            </>                         
 				</div>
 			)}
 			<div id="pdf">
