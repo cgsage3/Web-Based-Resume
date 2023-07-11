@@ -2,6 +2,8 @@
 require('dotenv').config();
 const path = require('path');
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
+
 const puppeteer = require('puppeteer'); // Adding Puppeteer
 // For backend and express
 const express = require('express');
@@ -21,6 +23,7 @@ const infoSchema = new mongoose.Schema({
     bio: {
         type: String,
         required: true,
+        unique: true
     },
     dateAdded: {
         type: Date,
@@ -110,6 +113,7 @@ const coverSchema = new mongoose.Schema({
 const User = mongoose.model('users', UserSchema);
 const Exprerience = mongoose.model('newexp', experienceSchema);
 const Cover = mongoose.model('coverLetter', coverSchema);
+infoSchema.plugin(uniqueValidator);
 const Info = mongoose.model('info', infoSchema);
 const Education = mongoose.model('education', eduSchema);
  
@@ -135,7 +139,6 @@ app.post("/add-cover", async (req, resp) => {
         let coverR = await cov.save();
         coverR = coverR.toObject();
         if (coverR) {
-            delete coverR.password;
             resp.send(req.body);
             console.log(coverR);
         } else {
@@ -153,7 +156,6 @@ app.post("/add-info", async (req, resp) => {
         let infoR = await infoV.save();
         infoR = infoR.toObject();
         if (infoR) {
-            delete infoR.password;
             resp.send(req.body);
             console.log(infoR);
         } else {
@@ -188,7 +190,6 @@ app.post("/add", async (req, resp) => {
         let result = await exp.save();
         result = result.toObject();
         if (result) {
-            delete result.password;
             resp.send(req.body);
             console.log(result);
         } else {

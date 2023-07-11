@@ -5,7 +5,7 @@ function BioAdd() {
     const onSubmit = async (e) => {
         e.preventDefault();
         let result = await fetch(
-        'https://resume-mern.onrender.com/add-info', {
+        'http://localhost:5000/add-info', {
             method: "post",
             body: JSON.stringify({ bio }),
             headers: {
