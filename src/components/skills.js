@@ -1,6 +1,6 @@
 const Skills = () => (
 <div class="section row">
-	<h2 class="col">Skills</h2>
+	<h2 class="col">Technical Skills</h2>
 	<div class="section-text col-right row">
 		<ul class="skills one">
 			<li><h3 class="skill-title">Programming Languages</h3></li>	

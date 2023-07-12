@@ -27,6 +27,7 @@ form input {
 }
 .bio-text {
     font-size: 16px;
+    text-align: justify;
 }
 /*
  Primary Rules
@@ -96,6 +97,7 @@ a:hover {
     font-size: 16px; 
     font-family: 'Source Sans Pro', sans-serif; 
     color:#101010;
+    text-align: justify;
 }
 .contact-info { 
     font-size: 16px;
@@ -135,9 +137,22 @@ ul.skills li{
 ul.skills li:last-child{
   margin:0;
 }
+.skill-right {
+    display: flex;
+    align-items: baseline;
+}
+
 .skill-title {
     font-size: 16px;
+    margin-right: 10px;
+    width: 20%;
 }
+
+.skill-right p {
+    margin: 0;
+    width: 80%;
+}
+
 /*
  Float Rules
 */

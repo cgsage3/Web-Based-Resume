@@ -16,7 +16,7 @@ function BioDb() {
     console.log(bio);
     return (
     <div class="section row">
-                <h2 class="col">Bio</h2>
+                <h2 class="col">Summary</h2>
                 <div class="section-text col-right row">
                 	<div class="bio-text">
                         {bio.map(function(e) { return e.bio; }).sort().reverse()[0]}

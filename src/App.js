@@ -7,6 +7,7 @@ import EducationDb from "./components/educationDb.js";
 import ExperienceDb from "./components/experienceDb.js";
 // import Interests from "./components/interests.js";
 import Skills from "./components/skills.js";
+import SkillsAlt from "./components/skillsAlt.js";
 import Cover from "./components/cover.js";
 // import Form from "./components/form.js";
 import BioAdd from "./components/bioAdd.js";
@@ -63,9 +64,9 @@ function App() {
                     {!coverOnlyMode && (
                         <>
                             <BioDb/>
+                            <SkillsAlt/>
                             <ExperienceDb/>            
                             <EducationDb/>
-                            <Skills/>
                         </>
                     )}
                     {coverOnlyMode && (
