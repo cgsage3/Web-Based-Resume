@@ -28,6 +28,7 @@ form input {
 .bio-text {
     font-size: 16px;
     text-align: justify;
+    margin-bottom: 15px;
 }
 /*
  Primary Rules
@@ -151,6 +152,7 @@ ul.skills li:last-child{
 .skill-right p {
     margin: 0;
     width: 80%;
+    font-size: 16px;
 }
 
 /*
