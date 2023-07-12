@@ -138,6 +138,10 @@ ul.skills li{
 ul.skills li:last-child{
   margin:0;
 }
+.flex-cont {
+    margin: 0 0 15px 0;
+}
+
 .skill-right {
     display: flex;
     align-items: baseline;
